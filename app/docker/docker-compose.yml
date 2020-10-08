@@ -1,0 +1,19 @@
+version: "3.3"
+
+services:
+  activemq:
+    image: rmohr/activemq
+    ports:
+      - 61616:6161
+      - 8161:8161
+  leapp:
+    image: openjdk:14
+    container_name: "leapp"
+    restart: always
+    ports:
+      - 8080:8080
+    volumes:
+      - "../target/app.jar:/app.jar"
+    command: ['java', '-jar', '/app.jar']
+
+
