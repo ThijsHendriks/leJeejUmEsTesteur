@@ -13,7 +13,7 @@ public class LeController {
 
 	@GetMapping("/sendemail")
 	public String send() {
-		jmsTemplate.convertAndSend("mailbox", new Email("info@example.com", "Hello"));
+		jmsTemplate.convertAndSend("mailbox", "Hello");
 		return "Ok";
 	}
 }
