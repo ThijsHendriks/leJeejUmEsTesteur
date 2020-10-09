@@ -2,11 +2,11 @@ package nl.thijs.hendriks.jeejumeskaraoke;
 
 import com.intuit.karate.junit5.Karate;
 
-class JeejUnEsRunner {
+class JeejUnEsTest {
     
     @Karate.Test
     Karate testUsers() {
-        return Karate.run("jms").relativeTo(getClass());
+        return Karate.run().relativeTo(getClass());
     }    
 
 }
