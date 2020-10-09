@@ -5,7 +5,7 @@ import com.intuit.karate.junit5.Karate;
 class JeejUnEsTest {
     
     @Karate.Test
-    Karate testUsers() {
+    Karate testJMS() {
         return Karate.run().relativeTo(getClass());
     }    
 

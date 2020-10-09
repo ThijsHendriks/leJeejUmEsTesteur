@@ -7,6 +7,9 @@ Feature: is the JMS message send
 
   Scenario: send the message to the JMS Queue
     Given path 'sendemail'
+    And params { message: 'Sillie' }
     When method get
     Then status 200
-#    And queue.waitForNextMessage() == 'Hello'
+    And def message = queue.waitForNextMessage()
+		And assert message == 'Sillie'
+

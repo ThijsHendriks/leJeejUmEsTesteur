@@ -4,7 +4,7 @@ services:
   activemq:
     image: rmohr/activemq
     ports:
-      - 61616:6161
+      - 61616:61616
       - 8161:8161
   leapp:
     image: openjdk:14

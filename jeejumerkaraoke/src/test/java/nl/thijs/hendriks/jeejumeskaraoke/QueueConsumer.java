@@ -8,10 +8,6 @@ import javax.jms.MessageConsumer;
 import javax.jms.Session;
 import javax.jms.TextMessage;
 
-/**
- *
- * @author pthomas3
- */
 public class QueueConsumer {
 
     private final Connection connection;
